@@ -282,3 +282,19 @@ Processing by ArticlesController#create as HTML
 Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms | Allocations: 6764)
 
 
+Started GET "/articles/1/edit" for ::1 at 2021-02-25 10:58:52 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 9.2ms | Allocations: 1099)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 98.4ms | Allocations: 5628)
+Completed 200 OK in 170ms (Views: 126.1ms | ActiveRecord: 3.1ms | Allocations: 10332)
+
+
